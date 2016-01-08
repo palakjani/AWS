@@ -11,6 +11,7 @@
   <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
 
   <title>Add Extension</title>
+  
 
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/weather-icons.css">
