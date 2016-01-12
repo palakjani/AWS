@@ -60,25 +60,28 @@ public class CityController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		String flag = request.getParameter("flag");
+		if(flag.equals("insertCity"))
+		{
 		String stateName=request.getParameter("stateName");
-		String cityName=request.getParameter("city");
+		String cityName=request.getParameter("cityName");
 		String cityDescription=request.getParameter("cityDescription");
 	
 		HttpSession session = request.getSession();
-		CityVO v=new CityVO();
-		
-		
-		v.setCityName(cityName);
-		v.setCityDescription(cityDescription);
-			
+		stateVO sv=new stateVO();
+		CityVO cv=new CityVO();
+		sv.setSid(Integer.parseInt(stateName));
+		cv.setCityName(cityName);
+		cv.setCityDescription(cityDescription);
+		cv.setSv(sv);
 		CityDAO d=new CityDAO();
 		
-		d.InsertCity(v);
+		d.InsertCity(cv);
 		
-		response.sendRedirect("admin/state.jsp");
+		response.sendRedirect("admin/city.jsp");
 	
 	
 	}
 
+}
 }

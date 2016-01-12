@@ -3,15 +3,23 @@ package VO;
 import java.io.Serializable;
 
 public class stateVO implements Serializable{
-	private int stateId;
+	private int sid;
 	private String stateName;
 	private String stateDescription;
-	private countryVO countryVO;
-	public int getStateId() {
-		return stateId;
+	countryVO countryVO;
+	countryVO cv = new countryVO();
+	public countryVO getCv() {
+		return cv;
 	}
-	public void setStateId(int stateId) {
-		this.stateId = stateId;
+	public void setCv(countryVO cv) {
+		this.cv = cv;
+	}
+	
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
 	}
 	public String getStateName() {
 		return stateName;

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -56,7 +57,7 @@
               </div>
               <div class="panel-body ">
                 <hr>
-                <form id="basicForm" action="form-validation.html" class="form-horizontal">
+                <form id="basicForm" action="<%=request.getContextPath()%>/regController" method="post" class="form-horizontal">
  
                   
     <div class="form-group">
@@ -76,7 +77,7 @@
                    <div class="form-group">
                     <label class="col-sm-3 control-label">Email <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <input type="text" name="username" class="form-control" placeholder="Enter your User name..." required />
+                      <input type="text" name="email" class="form-control" placeholder="Enter your User name..." required />
                     </div> 
                   </div>       
                   
@@ -98,230 +99,91 @@
                     <label class="col-sm-3 control-label">Date Of Birth<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
                    
-                      <div class="input-group">
-<input id="datepicker" class="form-control hasDatepicker" type="text" placeholder="mm/dd/yyyy">
-<span class="input-group-addon">
-<i class="glyphicon glyphicon-calendar"></i>
-</span>
-
-
-</div>
-<div class="input-group">
-<div id="datepicker-inline" class="hasDatepicker">
-<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
-<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
-<a class="ui-datepicker-prev ui-corner-all" title="Prev" data-event="click" data-handler="prev">
-<span class="ui-icon ui-icon-circle-triangle-w">Prev</span>
-</a>
-<a class="ui-datepicker-next ui-corner-all" title="Next" data-event="click" data-handler="next">
-<span class="ui-icon ui-icon-circle-triangle-e">Next</span>
-</a>
-<div class="ui-datepicker-title">
-<span class="ui-datepicker-month">January</span>
-<span class="ui-datepicker-year">2016</span>
-</div>
-</div>
-<table class="ui-datepicker-calendar">
-<thead>
-<tr>
-<th class="ui-datepicker-week-end" scope="col">
-<span title="Sunday">Su</span>
-</th>
-<th scope="col">
-<span title="Monday">Mo</span>
-</th>
-<th scope="col">
-<span title="Tuesday">Tu</span>
-</th>
-<th scope="col">
-<span title="Wednesday">We</span>
-</th>
-<th scope="col">
-<span title="Thursday">Th</span>
-</th>
-<th scope="col">
-<span title="Friday">Fr</span>
-</th>
-<th class="ui-datepicker-week-end" scope="col">
-<span title="Saturday">Sa</span>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-days-cell-over ui-datepicker-current-day ui-datepicker-today" data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default ui-state-highlight ui-state-active" href="#">1</a>
-</td>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">2</a>
-</td>
-</tr>
-<tr>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">3</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">4</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">5</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">6</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">7</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">8</a>
-</td>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">9</a>
-</td>
-</tr>
-<tr>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">10</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">11</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">12</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">13</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">14</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">15</a>
-</td>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">16</a>
-</td>
-</tr>
-<tr>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">17</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">18</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">19</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">20</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">21</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">22</a>
-</td>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">23</a>
-</td>
-</tr>
-<tr>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">24</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">25</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">26</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">27</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">28</a>
-</td>
-<td class=" " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">29</a>
-</td>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">30</a>
-</td>
-</tr>
-<tr>
-<td class=" ui-datepicker-week-end " data-year="2016" data-month="0" data-event="click" data-handler="selectDay">
-<a class="ui-state-default" href="#">31</a>
-</td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-<td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled"> </td>
-</tr>
-</tbody>
-</table>
-</div>       
-</div> 
+                      <div class="form-group">
+					 <div class="col-sm-8">
+                      <input type="text" name="date" class="form-control" placeholder="dd/mm/yyyy" required />
+                    </div> 
  </div>     
- </div>   
+ </div>
+ </div>
+ 
                
                  <div class="form-group">
-<label class="col-sm-3 control-label nopaddingtop">
-Gender
+                    <label class="col-sm-3 control-label">Gender<span class="text-danger">*</span></label>
 <span class="text-danger">*</span>
-</label>
-<div class="col-sm-9">
+<div class="col-sm-8">
 <label class="rdiobox">
-<input id="gender" type="radio" required="" value="male" name="platform" aria-required="true">
+<input id="gender" type="radio" required="" value="male" name="gender" aria-required="true">
 <span>Male</span>
 </label>
 <label class="rdiobox">
-<input type="radio" value="female" name="platform">
+<input id="gender" type="radio" value="female" name="gender">
 <span>Female</span>
 </label>
 <label class="error" for="platform"></label>
 </div>
 </div>  
 
-                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Country<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Country Name <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-        <select id="country" class="select2 select2-hidden-accessible" required="" data-placeholder="Choose One" style="width: 100%" name="country" aria-required="true" tabindex="-1" aria-hidden="true"></select>
-     
-        <label class="error" for="country"></label>
+										<select id="country" class="select2 select2-hidden-accessible"
+											required="" data-placeholder="Choose One" style="width: 100%"
+											name="country" aria-required="true" tabindex="-1"
+											aria-hidden="true">
+											<option value="0">Select Country</option>
+											<c:forEach items="${sessionScope.countryList}" var="i">
+												<option value="${i.id}">${i.countryName}</option>
+											</c:forEach>
+										</select> <label class="error" for="state"></label>
     </div>
                   </div>
+                  
  
-                 <div class="form-group">
-                    <label class="col-sm-3 control-label">State<span class="text-danger">*</span></label>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">State Name <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-        <select id="state" class="select2 select2-hidden-accessible" required="" data-placeholder="Choose One" style="width: 100%" name="state" aria-required="true" tabindex="-1" aria-hidden="true"></select>
-     
-        <label class="error" for="state"></label>
+										<select id="country" class="select2 select2-hidden-accessible"
+											required="" data-placeholder="Choose One" style="width: 100%"
+											name="state" aria-required="true" tabindex="-1"
+											aria-hidden="true">
+											<option value="0">Select State</option>
+											<c:forEach items="${sessionScope.stateList}" var="i">
+												<option value="${i.sid}">${i.stateName}</option>
+											</c:forEach>
+										</select> <label class="error" for="state"></label>
     </div>
                   </div>
-              
+                   
               <div class="form-group">
-                    <label class="col-sm-3 control-label">City<span class="text-danger">*</span></label>
+                    <label class="col-sm-3 control-label">City Name <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-        <select id="city" class="select2 select2-hidden-accessible" required="" data-placeholder="Choose One" style="width: 100%" name="city" aria-required="true" tabindex="-1" aria-hidden="true"></select>
-     
-        <label class="error" for="city"></label>
+										<select id="city" class="select2 select2-hidden-accessible"
+											required="" data-placeholder="Choose One" style="width: 100%"
+											name="city" aria-required="true" tabindex="-1"
+											aria-hidden="true">
+											<option value="0">Select City</option>
+											<c:forEach items="${sessionScope.cityList}" var="i">
+												<option value="${i.cid}">${i.cityName}</option>
+											</c:forEach>
+										</select> <label class="error" for="state"></label>
     </div>
                   </div>
+                  
                 
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Address<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <textarea rows="5" class="form-control" placeholder="Type your Address..." required></textarea>
+                      <textarea rows="5" class="form-control" name="address" placeholder="Type your Address..." required></textarea>
                     </div>
                   </div>   
+                  
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Contact number<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="contact" class="form-control" placeholder="contact number" required />
+                    </div> 
+                  </div>    
  					
  					
                   <hr>
@@ -329,6 +191,7 @@ Gender
                   <div class="row">
                     <div class="col-sm-9 col-sm-offset-3">
                       <button class="btn btn-success btn-quirk btn-wide mr5">Submit</button>
+                      <input type="hidden" name="flag" value="insertInfo">
                       <button type="reset" class="btn btn-quirk btn-wide btn-default">Reset</button>
                     </div>
                   </div>

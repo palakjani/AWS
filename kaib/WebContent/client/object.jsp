@@ -10,7 +10,7 @@
   <meta name="author" content="">
   <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
 
-  <title>Add Object</title>
+  <title>View Object</title>
 
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/weather-icons.css">
@@ -43,7 +43,7 @@
       <ol class="breadcrumb breadcrumb-quirk">
         <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
         <li><a href="general-forms.html">Forms</a></li>
-        <li class="active">Bucket</li>
+        <li class="active">Object</li>
       </ol>
 
       <div class="row" style="background: white">
@@ -51,8 +51,8 @@
         <div class="col-md-12" >
           <div class="panel">
               <div class="panel-heading nopaddingbottom">
-                <h4 class="panel-title">Create a bucket-select a bucket name and region</h4>
-                <p>A bucket is a container for a object stored in Amazon S3.When creating a bucket you can choose a region to optimize for latency minimize cost or address regulatory requirements.  </p>
+                <h4 class="panel-title">View Object</h4>
+                
               </div>
               <div class="panel-body ">
                 <hr>

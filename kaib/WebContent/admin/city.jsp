@@ -43,7 +43,7 @@
     <div class="contentpanel">
 
       <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
+        <li><a href="index.jsp"><i class="fa fa-home mr5"></i> Home</a></li>
         <li><a href="general-forms.html">Forms</a></li>
         <li class="active">City</li>
       </ol>
@@ -58,18 +58,18 @@
               </div>
               <div class="panel-body ">
                 <hr>
-                <form method="post" id="basicForm" action="<%=request.getContextPath() %>/CityControllerController" class="form-horizontal">
+                <form method="post" id="basicForm" action="<%=request.getContextPath()%>/CityController" class="form-horizontal">
                  
     <div class="form-group">
                     <label class="col-sm-3 control-label">State Name <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
 										<select id="country" class="select2 select2-hidden-accessible"
 											required="" data-placeholder="Choose One" style="width: 100%"
-											name="state" aria-required="true" tabindex="-1"
+											name="stateName" aria-required="true" tabindex="-1"
 											aria-hidden="true">
 											<option value="0">Select State</option>
 											<c:forEach items="${sessionScope.stateList}" var="i">
-												<option value="${i.stateId}">${i.stateName}</option>
+												<option value="${i.sid}">${i.stateName}</option>
 											</c:forEach>
 										</select> <label class="error" for="state"></label>
     </div>
@@ -91,6 +91,7 @@
                   <div class="row">
                     <div class="col-sm-9 col-sm-offset-3">
                       <button class="btn btn-success btn-quirk btn-wide mr5">Submit</button>
+                      <input type="hidden" name="flag" value="insertCity">
                       <button type="reset" class="btn btn-quirk btn-wide btn-default">Reset</button>
                     </div>
                   </div>

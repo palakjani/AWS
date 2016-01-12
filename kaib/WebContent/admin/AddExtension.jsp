@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +13,6 @@
   <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
 
   <title>Add Extension</title>
-  
 
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/weather-icons.css">
@@ -57,27 +58,34 @@
               </div>
               <div class="panel-body ">
                 <hr>
-                <form id="basicForm" action="form-validation.html" class="form-horizontal">
+                <form  method="post" id="basicForm" action="<%=request.getContextPath() %>/ExtensionController" class="form-horizontal">
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Select Category <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-        <select id="category" class="select2 select2-hidden-accessible" required="" data-placeholder="Choose One" style="width: 100%" name="category" aria-required="true" tabindex="-1" aria-hidden="true"></select>
-     
-        <label class="category" for="country"></label>
+                    <select name="category" class="select2 select2-hidden-accessible"
+											required="" data-placeholder="Choose One" style="width: 100%"
+											 aria-required="true" tabindex="-1"
+											aria-hidden="true">
+											<option value="0">Select Category</option>
+											<c:forEach items="${sessionScope.categoryList}" var="i">
+												<option value="${i.id}">${i.categoryName}</option>
+											</c:forEach>
+                    
+      </select> <label class="error" for="category"></label>
     </div>
                   </div>
                   
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Add Extension <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <input type="text" name="name" class="form-control" placeholder="Enter your extension name..." required />
+                      <input type="text" name="extensionName" class="form-control" placeholder="Enter your extension name..." required />
                     </div> 
                   </div>
  
   <div class="form-group">
                     <label class="col-sm-3 control-label">Description <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <textarea rows="5" class="form-control" placeholder="Type your Description..." required></textarea>
+                      <textarea rows="5" name="extensionDescription" class="form-control" placeholder="Type your Description..." required></textarea>
                     </div>
                   </div>
 
@@ -87,7 +95,8 @@
 
                   <div class="row">
                     <div class="col-sm-9 col-sm-offset-3">
-                      <button class="btn btn-success btn-quirk btn-wide mr5">Submit</button>
+                      <input type ="submit" value="submit"  class="btn btn-success btn-quirk btn-wide mr5">
+                       <input type="hidden" name="flag" value="insertExtension">
                       <button type="reset" class="btn btn-quirk btn-wide btn-default">Reset</button>
                     </div>
                   </div>

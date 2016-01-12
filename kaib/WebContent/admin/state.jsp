@@ -57,7 +57,7 @@
               </div>
               <div class="panel-body ">
                 <hr>
-                <form method="post" id="basicForm" action="<%=request.getContextPath() %>/stateController" class="form-horizontal">
+                <form method="post" id="basicForm" action="<%=request.getContextPath()%>/stateController" class="form-horizontal">
                  
     <div class="form-group">
                     <label class="col-sm-3 control-label">Country Name <span class="text-danger">*</span></label>
@@ -90,6 +90,7 @@
                   <div class="row">
                     <div class="col-sm-9 col-sm-offset-3">
                       <button class="btn btn-success btn-quirk btn-wide mr5">Submit</button>
+                      <input type="hidden" value="insertState" name="flag">
                       <button type="reset" class="btn btn-quirk btn-wide btn-default">Reset</button>
                     </div>
                   </div>

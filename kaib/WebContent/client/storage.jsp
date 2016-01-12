@@ -96,6 +96,7 @@
                     <div class="col-sm-9 col-sm-offset-3">
                       <button class="btn btn-success btn-quirk btn-wide mr5">Create</button>
                       <button type="reset" class="btn btn-quirk btn-wide btn-default">Cancel</button>
+                      <a href="<%=request.getContextPath()%>/regController?flag=searchLocation">registration</a>
                     </div>
                   </div>
 

@@ -56,32 +56,32 @@
               </div>
               <div class="panel-body ">
                 <hr>
-                <form id="basicForm" action="form-validation.html" class="form-horizontal">
+                <form  method="post" id="basicForm" action="<%=request.getContextPath()%>/storageController" class="form-horizontal">
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Plan Name<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <input type="text" name="name" class="form-control" placeholder="Enter your Plan name..." required />
+                      <input type="text" name="storagePlaneName" class="form-control" placeholder="Enter your Plan name..." required />
                     </div> 
                   </div>
                   
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Data Size<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <input type="text" name="name" class="form-control" placeholder="Enter your Data Size ..." required />
+                      <input type="text" name="storageDatasize" class="form-control" placeholder="Enter your Data Size ..." required />
                     </div> 
                   </div>
                   
                   <div class="form-group">
                     <label class="col-sm-3 control-label">Price<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <input type="text" name="name" class="form-control" placeholder="Enter your Price ..." required />
+                      <input type="text" name="storagePrice" class="form-control" placeholder="Enter your Price ..." required />
                     </div> 
                   </div>
                   
                    <div class="form-group">
                     <label class="col-sm-3 control-label">Description <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                      <textarea rows="5" class="form-control" placeholder="Type your Description..." required></textarea>
+                      <textarea rows="5" class="form-control" name="storageDescription" placeholder="Type your Description..." required></textarea>
                     </div>
                   </div>
                   

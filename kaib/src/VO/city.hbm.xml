@@ -5,7 +5,7 @@
 <hibernate-mapping>
 	<class name="VO.CityVO" table="city">
 		
-		<id name="cityId" type="int" column="cityid">
+		<id name="cid" type="int" column="cid">
 			<generator class="increment" />
 		</id>
 		
@@ -16,6 +16,7 @@
 		<property name="cityDescription">
 			<column name="CityDescription" />
 		</property>
-		<many-to-one class="VO.stateVO" name="stateVO" column="sid"></many-to-one>
+		
+		<many-to-one class="VO.stateVO" name="sv" column="sid"></many-to-one>
 	</class>
 </hibernate-mapping>

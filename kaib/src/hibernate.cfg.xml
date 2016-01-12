@@ -18,5 +18,7 @@
         <mapping resource="VO/state.hbm.xml" />
         <mapping resource="VO/city.hbm.xml" />
         <mapping resource="VO/category.hbm.xml" />
+         <mapping resource="VO/storage.hbm.xml" />
+         <mapping resource="VO/reg.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

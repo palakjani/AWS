@@ -64,7 +64,7 @@
         <div class="tab-pane active" id="mainmenu">
           <h5 class="sidebar-title">Favorites</h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
-            <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="index.jsp"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             
           </ul>
 
@@ -76,6 +76,7 @@
            <li class="nav-parent"><a href=""><i class="fa fa-suitcase"></i> <span>Manage Category</span></a>
               <ul class="children">
                 <li><a href="category.jsp">Add Category</a></li>
+                 <li><a href="AddExtension.jsp">Add Extension</a></li>
                 <li><a href="categoryTable.jsp">Search Category</a></li>
               </ul>
             </li>
