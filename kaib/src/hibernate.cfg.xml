@@ -20,5 +20,7 @@
         <mapping resource="VO/category.hbm.xml" />
          <mapping resource="VO/storage.hbm.xml" />
          <mapping resource="VO/reg.hbm.xml" />
+          <mapping resource="VO/viewcategory.hbm.xml" />
+           <mapping resource="VO/login.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

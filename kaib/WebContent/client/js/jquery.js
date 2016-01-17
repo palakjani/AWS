@@ -1731,6 +1731,7 @@ Expr = Sizzle.selectors = {
 
 						// xml :nth-child(...) or :nth-last-child(...) or :nth(-last)?-of-type(...)
 						} else {
+
 							// Use the same loop as above to seek `elem` from the start
 							while ( (node = ++nodeIndex && node && node[ dir ] ||
 								(diff = nodeIndex = 0) || start.pop()) ) {
@@ -6498,6 +6499,7 @@ function defaultPrefilter( elem, props, opts ) {
 	}
 }
 
+
 function propFilter( props, specialEasing ) {
 	var index, name, easing, value, hooks;
 
@@ -6797,6 +6799,7 @@ jQuery.fn.extend({
 			jQuery.queue( this, type, [] );
 
 			if ( hooks && hooks.stop ) {
+
 				hooks.stop.call( this, true );
 			}
 
@@ -8985,6 +8988,7 @@ jQuery.fn.extend({
 
 		if ( !doc ) {
 			return;
+
 		}
 
 		docElem = doc.documentElement;

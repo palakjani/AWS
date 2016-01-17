@@ -13,10 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.countryDAO;
+import DAO.loginDAO;
 import DAO.regDAO;
 import DAO.stateDAO;
 import VO.CityVO;
 import VO.countryVO;
+import VO.loginVO;
 import VO.regVO;
 import VO.stateVO;
 
@@ -95,6 +97,8 @@ public class regController extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		regVO rv=new regVO();
+		loginVO lv=new loginVO();
+		loginDAO ld=new loginDAO();
 		stateVO sv=new stateVO();
 		sv.setSid(Integer.parseInt(state));
 		countryVO cv=new countryVO();
@@ -115,8 +119,12 @@ public class regController extends HttpServlet {
 	    regDAO rd = new regDAO();
 	    
 		rd.InsertInfo(rv);
+		lv.setEmail(email);
+		lv.setPassword(pw);
 		
-		response.sendRedirect("client/reg.jsp");
+		ld.InsertLogInfo(lv);
+		
+		response.sendRedirect("client/login.jsp");
 	    
 		
 		

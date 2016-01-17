@@ -841,6 +841,7 @@ $.each( { show: "fadeIn", hide: "fadeOut" }, function( method, defaultEffect ) {
 			element[ method ]( options );
 		} else if ( effectName !== method && element[ effectName ] ) {
 			element[ effectName ]( options.duration, options.easing, callback );
+
 		} else {
 			element.queue(function( next ) {
 				$( this )[ method ]();
@@ -1966,6 +1967,7 @@ var accordion = $.widget( "ui.accordion", {
 				// allow canceling activation
 				( this._trigger( "beforeActivate", event, eventData ) === false ) ) {
 			return;
+
 		}
 
 		options.active = collapsing ? false : this.headers.index( clicked );
@@ -9829,8 +9831,8 @@ spaces.hsla.to = function( rgba ) {
 		h = ( 60 * ( r - g ) / diff ) + 240;
 	}
 
-	// quirk (diff) == 0 means greyscale which, by definition, saturation = 0%
-	// otherwise, saturation is based on the ratio of quirk (diff) to lightness (add)
+	// chroma (diff) == 0 means greyscale which, by definition, saturation = 0%
+	// otherwise, saturation is based on the ratio of chroma (diff) to lightness (add)
 	if ( diff === 0 ) {
 		s = 0;
 	} else if ( l <= 0.5 ) {
@@ -12408,6 +12410,7 @@ var selectmenu = $.widget( "ui.selectmenu", {
 
 		this.isOpen = true;
 		this._toggleAttr();
+
 		this._resizeMenu();
 		this._position();
 

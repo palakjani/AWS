@@ -76,7 +76,7 @@
            <li class="nav-parent"><a href=""><i class="fa fa-suitcase"></i> <span>Manage Category</span></a>
               <ul class="children">
                 <li><a href="category.jsp">Add Category</a></li>
-                 <li><a href="AddExtension.jsp">Add Extension</a></li>
+                 <li><a href="<%=request.getContextPath()%>/ExtensionController?flag=searchExtension">>Add Extension</a></li>
                 <li><a href="categoryTable.jsp">Search Category</a></li>
               </ul>
             </li>

@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,7 +11,7 @@
   <meta name="author" content="">
   <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
 
-  <title>Storage Plan</title>
+  <title>Storage</title>
 
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/weather-icons.css">
@@ -43,7 +44,7 @@
       <ol class="breadcrumb breadcrumb-quirk">
         <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
         <li><a href="general-forms.html">Forms</a></li>
-        <li class="active">Storage plan</li>
+        <li class="active">Storage </li>
       </ol>
 
       <div class="row" style="background: white">
@@ -58,7 +59,7 @@
                 <hr>
                 <form id="basicForm" action="form-validation.html" class="form-horizontal">
                   <div class="form-group">
-                    <label class="col-sm-3 control-label">Plan Name<span class="text-danger">*</span></label>
+                    <label class="col-sm-3 control-label">storage plan<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
                       <input type="text" name="name" class="form-control" placeholder="Enter your Plan name..." required />
                     </div> 
@@ -96,7 +97,7 @@
                     <div class="col-sm-9 col-sm-offset-3">
                       <button class="btn btn-success btn-quirk btn-wide mr5">Create</button>
                       <button type="reset" class="btn btn-quirk btn-wide btn-default">Cancel</button>
-                      <a href="<%=request.getContextPath()%>/regController?flag=searchLocation">registration</a>
+                      
                     </div>
                   </div>
 

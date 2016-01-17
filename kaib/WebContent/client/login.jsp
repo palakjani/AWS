@@ -35,17 +35,17 @@
       <h4 class="panel-title">Welcome! Please signin.</h4>
     </div>
     
-      <form action="index.html">
+      <form action="<%=request.getContextPath()%>/loginController" method="post">
         <div class="form-group mb10">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input type="text" class="form-control" placeholder="Enter Username">
+            <input type="text" name="email" class="form-control" placeholder="Enter email">
           </div>
         </div>
         <div class="form-group nomargin">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input type="text" class="form-control" placeholder="Enter Password">
+            <input type="text" class="form-control" name="password" placeholder="Enter Password">
           </div>
         </div>
         <div><a href="" class="forgot">Forgot password?</a></div>
@@ -56,7 +56,7 @@
           </form>
       <hr class="invisible">
       <div class="form-group">
-        <a href="signup.html" class="btn btn-default btn-quirk btn-stroke btn-stroke-thin btn-block btn-sign">Not a member? Sign up now!</a>
+        <a href="reg.jsp" class="btn btn-default btn-quirk btn-stroke btn-stroke-thin btn-block btn-sign">Not a member? Sign up now!</a>
       </div>
     </div>
   </div><!-- panel -->

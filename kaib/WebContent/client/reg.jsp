@@ -31,19 +31,19 @@
 
 <body>
 
- <jsp:include page="header.jsp"></jsp:include>
+<%--  <jsp:include page="header.jsp"></jsp:include> --%>
 
 <section>
 
-<jsp:include page="leftpanel.jsp"></jsp:include>
+<%-- <jsp:include page="leftpanel.jsp"></jsp:include> --%>
 
-  <div class="mainpanel">
+<!--   <div class="mainpanel"> -->
 
     <div class="contentpanel">
 
       <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
-        <li><a href="general-forms.html">Forms</a></li>
+        <li><a href="login.jsp"><i class="fa fa-home mr5"></i> login</a></li>
+       
         <li class="active">Registration</li>
       </ol>
 
@@ -204,7 +204,7 @@
 
     </div><!-- contentpanel -->
 
-  </div><!-- mainpanel -->
+<!--   </div>mainpanel -->
 </section>
 
 <script src="js/jquery.js"></script>

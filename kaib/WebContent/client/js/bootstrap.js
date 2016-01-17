@@ -545,6 +545,7 @@ if (typeof jQuery === 'undefined') {
   // COLLAPSE PUBLIC CLASS DEFINITION
   // ================================
 
+
   var Collapse = function (element, options) {
     this.$element      = $(element)
     this.options       = $.extend({}, Collapse.DEFAULTS, options)
